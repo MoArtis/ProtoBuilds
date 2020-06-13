@@ -1,10 +1,10 @@
-title: Magic Hat (Working title)
+title: ProtoBuilds
 author: Mathieu Philippe
 email: mathieuphilippe.dev@gmail.com
 description: > # this means to ignore newlines until "show_excerpts:"
-  Test builds for Magic Hat (Working title)
+  A website to quickly share (bad) prototypes via WebGL.
 
-baseurl: "/MagicHatBuilds"
+baseurl: "/ProtoBuilds"
 
 show_excerpts: false # set to true to show excerpts on the homepage
 
