@@ -1,0 +1,11 @@
+<!-- <div class='ratio16_9'> 
+	<div id="gameContainer" class="fixedRatio_content"></div>
+</div> -->
+
+{%- assign margin = page.build_width | minus: 740 | divided_by: -2 -%}
+<div style='width: {{ page.build_width }}px; height: {{ page.build_height }}px; margin: 0 0 0 {{ margin }}px'>
+	<div id='gameContainer'></div>
+</div>
+<div class='fullscreen'>
+	<button class='btn btn-primary' onclick="gameInstance.SetFullscreen(1)">Set fullscreen</button> 
+</div>
