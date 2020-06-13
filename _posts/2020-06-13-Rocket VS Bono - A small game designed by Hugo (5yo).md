@@ -20,7 +20,7 @@ downloads:
    title: Linux Build
 ---
 
-![Rockets VS Bono GDD](/assets/images/Hugo-RocketVsBonoDesign.jpg)
+![Rockets VS Bono GDD](../assets/images/Hugo-RocketVsBonoDesign.jpg)
 
 Fast Feel Banana Peel by Alexander Nakarada<br>
 Link: [https://filmmusic.io/song/4782-fast-feel-banana-peel](https://filmmusic.io/song/4782-fast-feel-banana-peel)<br>
