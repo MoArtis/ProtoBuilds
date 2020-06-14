@@ -4,7 +4,7 @@ email: mathieuphilippe.dev@gmail.com
 description: > # this means to ignore newlines until "show_excerpts:"
   A website to quickly share (bad) prototypes via WebGL.
 
-baseurl: "/ProtoBuilds"
+baseurl: "https://moartis.github.io/ProtoBuilds"
 
 show_excerpts: false # set to true to show excerpts on the homepage
 
