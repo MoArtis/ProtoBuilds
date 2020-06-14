@@ -39,9 +39,6 @@ build_WebGL_name: WebGL
     <p>
         {{ page.summary }}
     </p>
-	<div class="wrapper">
-		{{ content }}
-	</div>
 {%- endif -%}
 
 <!-- -- Change logs -- -->
@@ -57,6 +54,8 @@ build_WebGL_name: WebGL
     </tbody>
 </table>
 {%- endif -%}
+
+{{ content }}
 
 <!-- -- Comments -- -->
 <h2>Share your feedback!</h2>
