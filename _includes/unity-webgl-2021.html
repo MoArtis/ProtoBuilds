@@ -17,15 +17,8 @@
 				var container = canvas.parentElement;
 				function onResize() {
 
-					var w = window.innerWidth;
-					var h = window.innerHeight;
-
-					var r = {{ page.build_height }} / {{ page.build_width }};
-
-					if (w * r > window.innerHeight) {
-						w = Math.min(w, Math.ceil(h / r));
-					}
-					h = Math.floor(w * r);
+					var w = {{ page.build_width }};
+					var h = {{ page.build_height }};
 
 					container.style.width = canvas.style.width = w + "px";
 					container.style.height = canvas.style.height = h + "px";
