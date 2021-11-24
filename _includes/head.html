@@ -17,5 +17,8 @@
         <script>
       var gameInstance = UnityLoader.instantiate("gameContainer", "{{ site.baseurl }}/builds/{{ page.build_path }}/Build/{{ page.build_webgl_name }}.json");
     </script>
+    {% endif %}	
+	{% if page.build_path_2021 %}
+	    <script src="{{ site.baseurl }}/builds/{{ page.build_path_2021 }}/Build/{{ page.build_webgl_name }}.loader.js"></script>
     {% endif %}
 </head>
