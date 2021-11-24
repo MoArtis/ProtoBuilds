@@ -16,23 +16,16 @@
 				var canvas = instance.Module.canvas;
 				var container = canvas.parentElement;
 				function onResize() {
-					var w;
-					var h;
 
-					if (scaleToFit) {
-						w = window.innerWidth;
-						h = window.innerHeight;
+					var w = window.innerWidth;
+					var h = window.innerHeight;
 
-						var r = {{ page.build_height }} / {{ page.build_width }};
+					var r = {{ page.build_height }} / {{ page.build_width }};
 
-						if (w * r > window.innerHeight) {
-							w = Math.min(w, Math.ceil(h / r));
-						}
-						h = Math.floor(w * r);
-					} else {
-						w = {{ page.build_width }};
-						h = {{ page.build_height }};
+					if (w * r > window.innerHeight) {
+						w = Math.min(w, Math.ceil(h / r));
 					}
+					h = Math.floor(w * r);
 
 					container.style.width = canvas.style.width = w + "px";
 					container.style.height = canvas.style.height = h + "px";
@@ -40,12 +33,6 @@
 					container.style.left = Math.floor((window.innerWidth - w) / 2) + "px";
 				}
 
-				var scaleToFit;
-				try {
-					scaleToFit = !!JSON.parse("");
-				} catch (e) {
-					scaleToFit = true;
-				}
 				window.addEventListener('resize', onResize);
 				onResize();
 			});
