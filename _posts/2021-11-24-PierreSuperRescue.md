@@ -1,7 +1,7 @@
 ---
 layout: build
 title: Pierre Super Rescue (Concept by Pierre)
-build_path: PSR_211124
+build_path_2021: PSR_211124
 build_webgl_name: WebGL
 build_width: 1280
 build_height: 720
