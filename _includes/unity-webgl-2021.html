@@ -7,8 +7,6 @@
 	<div id="gameContainer">
 		<canvas id="unity-canvas"></canvas>
 		<script>
-			var fullscreenButton = document.querySelector("#unity-fullscreen-button");
-		
 			createUnityInstance(document.querySelector("#unity-canvas"), {
 				dataUrl: "{{ site.baseurl }}/builds/{{ page.build_path_2021 }}/Build/{{ page.build_webgl_name }}.data.unityweb",
 				frameworkUrl: "{{ site.baseurl }}/builds/{{ page.build_path_2021 }}/Build/{{ page.build_webgl_name }}.framework.js.unityweb",
@@ -31,7 +29,8 @@
 				window.addEventListener('resize', onResize);
 				onResize();
 				
-				fullscreenButton.onclick = instance.SetFullscreen(1);
+				var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+				fullscreenButton.onclick = () => { instance.SetFullscreen(1); };
 			});
 		</script>
 	</div>
