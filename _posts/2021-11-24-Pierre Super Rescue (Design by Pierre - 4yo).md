@@ -5,6 +5,7 @@ build_path_2021: PSR_211124
 build_webgl_name: WebGL
 build_width: 1280
 build_height: 720
+og_image: og_PSR_211124.jpg
 summary: "I asked Pierre what game he wanted me to make and said 'a game where I look for friends in the forest'. Here is the results after 2 full days of work."
 changelog:
 

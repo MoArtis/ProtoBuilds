@@ -10,6 +10,15 @@
     {%- if jekyll.environment == 'production' and site.google_analytics -%}
         {%- include google-analytics.html -%}
     {%- endif -%}
+	
+	<!-- OPEN GRAPH -->
+	{% if page.og_image %}
+	<!-- <meta property="og:title" content=""> -->
+	<!-- <meta property="og:type" content="" /> -->
+	<!-- <meta property="og:description" content=""> -->
+	<meta property="og:image" content="{{ site.baseurl }}/assets/images/{{ page.og_image }}">
+	<!-- <meta property="og:url" content=""> -->
+	<meta name="twitter:card" content="summary_large_image">
 
     <!-- UNITY WEBGL BUILD -->
     {% if page.build_path %}
