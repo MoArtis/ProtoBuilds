@@ -31,9 +31,7 @@
 				window.addEventListener('resize', onResize);
 				onResize();
 				
-				fullscreenButton.onclick = () => {
-					unityInstance.SetFullscreen(1);
-				};
+				fullscreenButton.onclick = instance.SetFullscreen(1);
 			});
 		</script>
 	</div>
