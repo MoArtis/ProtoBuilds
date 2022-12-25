@@ -8,9 +8,9 @@
 		<canvas id="unity-canvas"></canvas>
 		<script>
 			createUnityInstance(document.querySelector("#unity-canvas"), {
-				dataUrl: "{{ site.baseurl }}/builds/{{ page.build_path_2022 }}/Build/{{ page.build_webgl_name }}.data",
-				frameworkUrl: "{{ site.baseurl }}/builds/{{ page.build_path_2022 }}/Build/{{ page.build_webgl_name }}.framework.js",
-				codeUrl: "{{ site.baseurl }}/builds/{{ page.build_path_2022 }}/Build/{{ page.build_webgl_name }}.wasm",
+				dataUrl: "{{ site.baseurl }}/builds/{{ page.build_path_2022 }}/Build/{{ page.build_webgl_name }}.data.br",
+				frameworkUrl: "{{ site.baseurl }}/builds/{{ page.build_path_2022 }}/Build/{{ page.build_webgl_name }}.framework.js.br",
+				codeUrl: "{{ site.baseurl }}/builds/{{ page.build_path_2022 }}/Build/{{ page.build_webgl_name }}.wasm.br",
 				streamingAssetsUrl: "StreamingAssets",
 			}).then(function (instance) {
 				var canvas = instance.Module.canvas;
