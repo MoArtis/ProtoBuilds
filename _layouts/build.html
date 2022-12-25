@@ -23,6 +23,10 @@ build_WebGL_name: WebGL
     {% include unity-webgl-2021.html %}
 {% endif %}
 
+{% if page.build_path_2022 %}
+    {% include unity-webgl-2022.html %}
+{% endif %}
+
 <!-- -- DOWNLOAD LINKS -- -->
 {% assign downloads = page.downloads | where_exp: "item", "item.url.size > 0" %}
 {%- if downloads.size > 0 -%}

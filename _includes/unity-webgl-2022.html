@@ -1,0 +1,40 @@
+<!-- <div class='ratio16_9'> 
+	<div id="gameContainer" class="fixedRatio_content"></div>
+</div> -->
+
+{%- assign margin = page.build_width | minus: 740 | divided_by: -2 -%}
+<div style='width: {{ page.build_width }}px; height: {{ page.build_height }}px; margin: 0 0 0 {{ margin }}px'>
+	<div id="gameContainer">
+		<canvas id="unity-canvas"></canvas>
+		<script>
+			createUnityInstance(document.querySelector("#unity-canvas"), {
+				dataUrl: "{{ site.baseurl }}/builds/{{ page.build_path_2021 }}/Build/{{ page.build_webgl_name }}.data",
+				frameworkUrl: "{{ site.baseurl }}/builds/{{ page.build_path_2021 }}/Build/{{ page.build_webgl_name }}.framework.js",
+				codeUrl: "{{ site.baseurl }}/builds/{{ page.build_path_2021 }}/Build/{{ page.build_webgl_name }}.wasm",
+				streamingAssetsUrl: "StreamingAssets",
+			}).then(function (instance) {
+				var canvas = instance.Module.canvas;
+				var container = canvas.parentElement;
+				function onResize() {
+
+					var w = {{ page.build_width }};
+					var h = {{ page.build_height }};
+
+					container.style.width = canvas.style.width = w + "px";
+					container.style.height = canvas.style.height = h + "px";
+					container.style.top = Math.floor((window.innerHeight - h) / 2) + "px";
+					container.style.left = Math.floor((window.innerWidth - w) / 2) + "px";
+				}
+
+				window.addEventListener('resize', onResize);
+				onResize();
+				
+				var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+				fullscreenButton.onclick = () => { instance.SetFullscreen(1); };
+			});
+		</script>
+	</div>
+</div>
+<div class='fullscreen'>
+	<button id="unity-fullscreen-button" class='btn btn-primary'>Set fullscreen</button> 
+</div>
